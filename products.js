@@ -1,17 +1,25 @@
-// Демонстрационный каталог. Изменяйте цены и описание здесь.
-// Кейсы в этом шаблоне — фиксированные наборы с заранее известным содержимым.
+// Каталог Sakura World. Цены привилегий и валюты заданы по информации владельца.
+// У кейсов пока нет подтверждённых цен/содержимого — они отображаются как «Скоро» и не продаются.
 window.SAKURA_PRODUCTS = [
-  {id:"vip",name:"VIP",category:"rank",tag:"СТАРТ",emoji:"👑",glow:"#f1b35c",price:79,description:"Базовая привилегия для комфортной игры.",detail:"Демонстрационный товар. Состав бонусов настрой перед публикацией."},
-  {id:"premium",name:"PREMIUM",category:"rank",tag:"ПОПУЛЯРНОЕ",emoji:"💎",glow:"#72baff",price:149,description:"Больше удобств и особый статус.",detail:"Демонстрационный товар. Состав бонусов настрой перед публикацией."},
-  {id:"deluxe",name:"DELUXE",category:"rank",tag:"ELITE",emoji:"🌌",glow:"#bd8aff",price:249,description:"Расширенный набор серверных возможностей.",detail:"Демонстрационный товар. Состав бонусов настрой перед публикацией."},
-  {id:"sakura",name:"SAKURA",category:"rank",tag:"SPECIAL",emoji:"🌸",glow:"#ff78c8",price:399,description:"Особый статус для фанатов Sakura World.",detail:"Демонстрационный товар. Состав бонусов настрой перед публикацией."},
-  {id:"starter-case",name:"Стартовый набор",category:"case",tag:"ФИКС. СОСТАВ",emoji:"🎁",glow:"#f3a6d7",price:39,description:"Заранее известный набор для старта.",detail:"Пример состава: 16 золотых яблок, 32 железных слитка, 1 алмазный меч. Настрой содержимое под сервер."},
-  {id:"builder-case",name:"Набор строителя",category:"case",tag:"ФИКС. СОСТАВ",emoji:"🧱",glow:"#d7a27d",price:59,description:"Полезные материалы для строительства.",detail:"Пример состава: 64 каменных кирпича, 32 стекла, 16 фонарей. Настрой содержимое под сервер."},
-  {id:"pvp-case",name:"Набор бойца",category:"case",tag:"ФИКС. СОСТАВ",emoji:"⚔️",glow:"#ff827e",price:89,description:"Заранее перечисленное снаряжение.",detail:"Пример состава: алмазный меч с фиксированными чарами и 16 золотых яблок. Настрой содержимое под сервер."},
-  {id:"coins-small",name:"1 000 монет",category:"coins",tag:"ИГРОВАЯ ВАЛЮТА",emoji:"🪙",glow:"#f6c96d",price:29,description:"Небольшое пополнение игрового баланса.",detail:"1000 серверных монет. Автовыдача не подключена."},
-  {id:"coins-medium",name:"5 000 монет",category:"coins",tag:"ВЫГОДНЕЕ",emoji:"💰",glow:"#e9b957",price:99,description:"Средний пакет игровых монет.",detail:"5000 серверных монет. Автовыдача не подключена."},
-  {id:"coins-large",name:"15 000 монет",category:"coins",tag:"МАКСИ",emoji:"🏆",glow:"#ffe19a",price:199,description:"Большой пакет игровой валюты.",detail:"15000 серверных монет. Автовыдача не подключена."},
-  {id:"tokens-50",name:"50 Sakura-токенов",category:"tokens",tag:"СТАРТ",emoji:"🌸",glow:"#ff80c8",price:10,description:"Первый пакет Sakura-токенов.",detail:"50 Sakura-токенов. Пример цены: 10 ₴."},
-  {id:"tokens-300",name:"300 Sakura-токенов",category:"tokens",tag:"ПОПУЛЯРНОЕ",emoji:"✨",glow:"#c29aff",price:50,description:"Пакет для более крупных покупок.",detail:"300 Sakura-токенов. Цена демонстрационная."},
-  {id:"tokens-750",name:"750 Sakura-токенов",category:"tokens",tag:"ВЫГОДНЕЕ",emoji:"💠",glow:"#9e9bff",price:100,description:"Большой пакет Sakura-токенов.",detail:"750 Sakura-токенов. Цена демонстрационная."}
+  {id:"hero",name:"HERO",category:"rank",tag:"ПРИВИЛЕГИЯ",emoji:"⚔️",glow:"#f1b35c",price:15,description:"Привилегия Hero для Sakura World.",detail:"Выдача через LuckPerms: группа hero."},
+  {id:"super",name:"SUPER",category:"rank",tag:"ПРИВИЛЕГИЯ",emoji:"🔥",glow:"#ff827e",price:25,description:"Привилегия Super для Sakura World.",detail:"Выдача через LuckPerms: группа super."},
+  {id:"vip",name:"VIP",category:"rank",tag:"ПОПУЛЯРНОЕ",emoji:"👑",glow:"#f1b35c",price:50,description:"Привилегия VIP для Sakura World.",detail:"Выдача через LuckPerms: группа vip."},
+  {id:"sakura",name:"SAKURA",category:"rank",tag:"ОСОБАЯ",emoji:"🌸",glow:"#ff78c8",price:100,description:"Привилегия Sakura для Sakura World.",detail:"Выдача через LuckPerms: группа sakura."},
+  {id:"dmoder",name:"Донатный модер",category:"rank",tag:"ПЕРСОНАЛ",emoji:"🛡️",glow:"#72baff",price:300,description:"Донатная привилегия модератора.",detail:"Перед покупкой уточни у администрации доступные команды и ограничения."},
+  {id:"dadmin",name:"Донатный админ",category:"rank",tag:"ПЕРСОНАЛ",emoji:"⚜️",glow:"#bd8aff",price:500,description:"Донатная привилегия администратора.",detail:"Перед покупкой уточни у администрации доступные команды и ограничения."},
+
+  {id:"case-donat",name:"Кейс с донатом",category:"case",tag:"СКОРО",emoji:"🎁",glow:"#ff78c8",price:null,description:"Кейс с привилегиями Sakura World.",detail:"Цена и точный состав пока не заданы. Покупка временно отключена."},
+  {id:"case-admin",name:"Кейс с административным донатом",category:"case",tag:"СКОРО",emoji:"🛡️",glow:"#bd8aff",price:null,description:"Кейс с административными привилегиями.",detail:"Цена и точный состав пока не заданы. Покупка временно отключена."},
+  {id:"case-coins",name:"Кейс с валютой",category:"case",tag:"СКОРО",emoji:"🪙",glow:"#f6c96d",price:null,description:"Кейс с игровой валютой — монетами.",detail:"Цена и точный состав пока не заданы. Покупка временно отключена."},
+  {id:"case-tokens",name:"Кейс с донат-валютой",category:"case",tag:"СКОРО",emoji:"💠",glow:"#9e9bff",price:null,description:"Кейс с Sakura-токенами.",detail:"Цена и точный состав пока не заданы. Покупка временно отключена."},
+  {id:"case-resources",name:"Кейс с ресурсами",category:"case",tag:"СКОРО",emoji:"⛏️",glow:"#d7a27d",price:null,description:"Кейс с игровыми ресурсами и предметами.",detail:"Цена и точный состав пока не заданы. Покупка временно отключена."},
+
+  {id:"coins-50k",name:"50 000 монет",category:"coins",tag:"СТАРТ",emoji:"🪙",glow:"#f6c96d",price:10,description:"50 000 монет на игровой баланс.",detail:"Расчёт по курсу 5 000 монет за 1 ₴."},
+  {id:"coins-250k",name:"250 000 монет",category:"coins",tag:"ПОПУЛЯРНОЕ",emoji:"💰",glow:"#e9b957",price:50,description:"250 000 монет на игровой баланс.",detail:"Расчёт по курсу 5 000 монет за 1 ₴."},
+  {id:"coins-500k",name:"500 000 монет",category:"coins",tag:"ВЫГОДНЕЕ",emoji:"🏆",glow:"#ffe19a",price:100,description:"500 000 монет на игровой баланс.",detail:"Расчёт по курсу 5 000 монет за 1 ₴."},
+  {id:"coins-1m",name:"1 000 000 монет",category:"coins",tag:"МАКСИ",emoji:"💎",glow:"#72baff",price:200,description:"1 000 000 монет на игровой баланс.",detail:"Расчёт по курсу 5 000 монет за 1 ₴."},
+
+  {id:"tokens-50",name:"50 Sakura-токенов",category:"tokens",tag:"СТАРТ",emoji:"🌸",glow:"#ff80c8",price:10,description:"50 Sakura-токенов для внутриигрового магазина.",detail:"Курс: 10 ₴ = 50 Sakura-токенов."},
+  {id:"tokens-250",name:"250 Sakura-токенов",category:"tokens",tag:"ПОПУЛЯРНОЕ",emoji:"✨",glow:"#c29aff",price:50,description:"250 Sakura-токенов для внутриигрового магазина.",detail:"Курс: 10 ₴ = 50 Sakura-токенов."},
+  {id:"tokens-500",name:"500 Sakura-токенов",category:"tokens",tag:"ВЫГОДНЕЕ",emoji:"💠",glow:"#9e9bff",price:100,description:"500 Sakura-токенов для внутриигрового магазина.",detail:"Курс: 10 ₴ = 50 Sakura-токенов."}
 ];

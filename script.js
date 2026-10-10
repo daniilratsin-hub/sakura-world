@@ -35,8 +35,9 @@
         </div>
         <div class="product-body">
           <h3>${escapeHtml(p.name)}</h3><p>${escapeHtml(p.description)}</p>
-          <div class="product-meta"><div class="price">${money(p.price)}</div>
-          <button class="add-button" data-add="${escapeHtml(p.id)}">В корзину +</button></div>
+          <p class="product-detail">${escapeHtml(p.detail || "")}</p>
+          <div class="product-meta"><div class="price">${p.price == null ? "Скоро" : money(p.price)}</div>
+          ${p.price == null ? '<button class="add-button" disabled aria-disabled="true">Скоро</button>' : `<button class="add-button" data-add="${escapeHtml(p.id)}">В корзину +</button>`}</div>
         </div>
       </article>`).join("") : '<div class="no-results">Ничего не найдено. Попробуй другой запрос.</div>';
   }
@@ -53,7 +54,7 @@
   }
 
   function add(id) {
-    if (!productById(id)) return;
+    if (!productById(id) || productById(id).price == null) return;
     cart[id] = (cart[id] || 0) + 1;
     renderCart();
     showToast(`${productById(id).name} добавлен в корзину`);
@@ -100,6 +101,10 @@
   document.querySelector("#checkout-form").addEventListener("submit", async e => {
     e.preventDefault();
     if (!qty()) { showToast("Сначала добавь товар в корзину"); return; }
+    if (Object.keys(cart).some(id => !productById(id) || productById(id).price == null)) {
+      showToast("В корзине есть товар, который пока недоступен");
+      return;
+    }
     const playerName = document.querySelector("#player-name").value.trim();
     if (!/^[A-Za-z0-9_]{3,16}$/.test(playerName)) {
       showToast("Проверь Minecraft Java-ник (3–16 символов)");
