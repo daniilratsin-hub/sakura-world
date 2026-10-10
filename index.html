@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10091f">
+  <meta name="description" content="Sakura World — магазин привилегий, игровых монет и Sakura-токенов для Minecraft.">
+  <title>Sakura World — магазин</title>
+  <link rel="icon" href="assets/sakura.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Sakura World — главная">
+      <img src="assets/sakura.svg" alt="" width="42" height="42">
+      <span><b>SAKURA</b><small>WORLD STORE</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Главная навигация">
+      <a href="#catalog">Магазин</a><a href="#about">О сервере</a><a href="#faq">FAQ</a>
+    </nav>
+    <button class="cart-button" id="open-cart" aria-label="Открыть корзину">Корзина <span id="cart-count">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> MINECRAFT SERVER · ONLINE STORE</div>
+        <h1>Твоя история.<br><span>Твой Sakura.</span></h1>
+        <p class="hero-text">Забирай привилегии, пополняй баланс и открывай новые возможности на Sakura World.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#catalog">Открыть магазин <span>↗</span></a><a class="btn btn-ghost" href="#about">О сервере</a></div>
+        <div class="server-pill"><span class="server-dot"></span><span>IP сервера</span><code>free.cloudblaze.org:52126</code><button id="copy-ip" title="Скопировать IP">⧉</button></div>
+      </div>
+      <div class="hero-art" aria-label="Декоративная иллюстрация Sakura">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="moon"></div><div class="sakura-tree"><div class="tree-trunk"></div><div class="tree-canopy"></div></div>
+        <div class="petal p1">✿</div><div class="petal p2">✧</div><div class="petal p3">✿</div><div class="petal p4">✦</div>
+        <div class="art-caption"><span>01 / SAKURA</span><b>Новый мир ждёт тебя</b></div>
+      </div>
+    </section>
+
+    <section class="stats section-wrap" id="about">
+      <div><span class="stat-icon">✦</span><b>Своя атмосфера</b><small>Играй и развивайся</small></div>
+      <div><span class="stat-icon">⌘</span><b>Paper / Spigot / Purpur</b><small>Java Edition</small></div>
+      <div><span class="stat-icon">❀</span><b>Магазин Sakura</b><small>Покупки в одном месте</small></div>
+    </section>
+
+    <section class="catalog section-wrap" id="catalog">
+      <div class="section-heading">
+        <div><div class="eyebrow">SAKURA MARKET</div><h2>Выбери свой <span>бонус</span></h2><p>Понятные товары, цены и содержимое — всё до покупки.</p></div>
+        <label class="search"><span>⌕</span><input id="search" type="search" placeholder="Найти товар..." aria-label="Поиск товара"></label>
+      </div>
+      <div class="filters" id="filters" aria-label="Категории товаров">
+        <button class="filter active" data-category="all">Все товары</button>
+        <button class="filter" data-category="rank">Привилегии</button>
+        <button class="filter" data-category="case">Кейсы</button>
+        <button class="filter" data-category="coins">Монеты</button>
+        <button class="filter" data-category="tokens">Sakura-токены</button>
+      </div>
+      <div class="product-grid" id="product-grid"></div>
+      <p class="catalog-note">Цены и наборы сейчас демонстрационные — измени их в <code>products.js</code> перед публикацией. Оплата пока выключена.</p>
+    </section>
+
+    <section class="banner section-wrap">
+      <div class="banner-flower">❀</div><div><div class="eyebrow">SAKURA COMMUNITY</div><h2>Встречаемся <span>в игре</span></h2><p>Сохрани IP и заходи исследовать мир вместе с другими игроками.</p></div>
+      <button class="btn btn-primary" id="copy-ip-bottom">Скопировать IP <span>⧉</span></button>
+    </section>
+
+    <section class="faq section-wrap" id="faq">
+      <div class="section-heading"><div><div class="eyebrow">HELP CENTER</div><h2>Частые <span>вопросы</span></h2></div></div>
+      <div class="faq-list">
+        <details><summary>Когда я получу покупку?</summary><p>Пока магазин работает в демо-режиме. После подключения платёжной системы покупка будет выдаваться только после серверной проверки подтверждённой оплаты.</p></details>
+        <details><summary>Как узнать свой ник?</summary><p>Перед оформлением заказа укажи точный Minecraft Java-ник. Не указывай пароль от аккаунта — он магазину не нужен.</p></details>
+        <details><summary>Что входит в кейс?</summary><p>В этой версии кейсы задуманы как фиксированные наборы с заранее указанными предметами, без платного случайного выпадения. Состав набора будет показан до заказа.</p></details>
+        <details><summary>Почему оплата пока недоступна?</summary><p>Нужно выбрать платёжного провайдера, настроить защищённый backend и проверку уведомлений об оплате. Секретные ключи нельзя размещать в публичном коде сайта.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="#home"><img src="assets/sakura.svg" alt="" width="36" height="36"><span><b>SAKURA</b><small>WORLD STORE</small></span></a>
+    <p>© <span id="year"></span> Sakura World. Неофициальный магазин сервера Minecraft.</p>
+    <div><a href="rules.html">Правила магазина</a><a href="privacy.html">Конфиденциальность</a></div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="cart-overlay" id="cart-overlay" hidden>
+    <button class="overlay-bg" id="close-cart-bg" aria-label="Закрыть корзину"></button>
+    <aside class="cart-panel" aria-label="Корзина">
+      <div class="cart-head"><div><div class="eyebrow">YOUR ORDER</div><h2>Корзина</h2></div><button class="icon-button" id="close-cart" aria-label="Закрыть">×</button></div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-total"><span>Итого</span><b id="cart-total">0 ₴</b></div>
+      <form id="checkout-form" class="checkout-form">
+        <label>Minecraft Java-ник<input id="player-name" name="playerName" required minlength="3" maxlength="16" pattern="[A-Za-z0-9_]+" placeholder="Например, SakuraPlayer"></label>
+        <p class="form-hint">Нужен только игровой ник. Пароль Minecraft не запрашивается.</p>
+        <button class="btn btn-primary full" type="submit">Перейти к оформлению</button>
+        <p class="form-hint">Заказ будет создан после подключения серверной части. Оплата пока выключена.</p>
+      </form>
+    </aside>
+  </div>
+  <script src="products.js"></script><script src="backend-config.js"></script><script src="script.js"></script>
+</body>
+</html>
