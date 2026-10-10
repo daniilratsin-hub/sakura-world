@@ -1,5 +1,4 @@
-// Каталог Sakura World. Цены привилегий и валюты заданы по информации владельца.
-// У кейсов пока нет подтверждённых цен/содержимого — они отображаются как «Скоро» и не продаются.
+// Каталог Sakura World. Цены указаны по информации владельца. Содержимое кейсов можно уточнить отдельно.
 window.SAKURA_PRODUCTS = [
   {id:"hero",name:"HERO",category:"rank",tag:"ПРИВИЛЕГИЯ",emoji:"⚔️",glow:"#f1b35c",price:15,description:"Привилегия Hero для Sakura World.",detail:"Выдача через LuckPerms: группа hero."},
   {id:"super",name:"SUPER",category:"rank",tag:"ПРИВИЛЕГИЯ",emoji:"🔥",glow:"#ff827e",price:25,description:"Привилегия Super для Sakura World.",detail:"Выдача через LuckPerms: группа super."},
@@ -8,11 +7,11 @@ window.SAKURA_PRODUCTS = [
   {id:"dmoder",name:"Донатный модер",category:"rank",tag:"ПЕРСОНАЛ",emoji:"🛡️",glow:"#72baff",price:300,description:"Донатная привилегия модератора.",detail:"Перед покупкой уточни у администрации доступные команды и ограничения."},
   {id:"dadmin",name:"Донатный админ",category:"rank",tag:"ПЕРСОНАЛ",emoji:"⚜️",glow:"#bd8aff",price:500,description:"Донатная привилегия администратора.",detail:"Перед покупкой уточни у администрации доступные команды и ограничения."},
 
-  {id:"case-donat",name:"Кейс с донатом",category:"case",tag:"СКОРО",emoji:"🎁",glow:"#ff78c8",price:null,description:"Кейс с привилегиями Sakura World.",detail:"Цена и точный состав пока не заданы. Покупка временно отключена."},
-  {id:"case-admin",name:"Кейс с административным донатом",category:"case",tag:"СКОРО",emoji:"🛡️",glow:"#bd8aff",price:null,description:"Кейс с административными привилегиями.",detail:"Цена и точный состав пока не заданы. Покупка временно отключена."},
-  {id:"case-coins",name:"Кейс с валютой",category:"case",tag:"СКОРО",emoji:"🪙",glow:"#f6c96d",price:null,description:"Кейс с игровой валютой — монетами.",detail:"Цена и точный состав пока не заданы. Покупка временно отключена."},
-  {id:"case-tokens",name:"Кейс с донат-валютой",category:"case",tag:"СКОРО",emoji:"💠",glow:"#9e9bff",price:null,description:"Кейс с Sakura-токенами.",detail:"Цена и точный состав пока не заданы. Покупка временно отключена."},
-  {id:"case-resources",name:"Кейс с ресурсами",category:"case",tag:"СКОРО",emoji:"⛏️",glow:"#d7a27d",price:null,description:"Кейс с игровыми ресурсами и предметами.",detail:"Цена и точный состав пока не заданы. Покупка временно отключена."},
+  {id:"case-donat",name:"Кейс с донатом",category:"case",tag:"ДОНАТ",emoji:"🎁",glow:"#ff78c8",price:29,description:"Кейс с привилегиями Sakura World.",detail:"Стоимость кейса — 29 ₴. Случайный состав нужно показать покупателю до оплаты."},
+  {id:"case-admin",name:"Кейс с административным донатом",category:"case",tag:"АДМИН",emoji:"🛡️",glow:"#bd8aff",price:350,description:"Кейс с административными привилегиями.",detail:"Стоимость кейса — 350 ₴. Случайный состав нужно показать покупателю до оплаты."},
+  {id:"case-coins",name:"Кейс с валютой",category:"case",tag:"МОНЕТЫ",emoji:"🪙",glow:"#f6c96d",price:10,description:"Кейс с игровой валютой — монетами.",detail:"Стоимость кейса — 10 ₴. Содержимое и возможные награды нужно указать отдельно."},
+  {id:"case-tokens",name:"Кейс с донат-валютой",category:"case",tag:"ТОКЕНЫ",emoji:"💠",glow:"#9e9bff",price:25,description:"Кейс с Sakura-токенами.",detail:"Стоимость кейса — 25 ₴. Содержимое и возможные награды нужно указать отдельно."},
+  {id:"case-resources",name:"Кейс с ресурсами",category:"case",tag:"РЕСУРСЫ",emoji:"⛏️",glow:"#d7a27d",price:5,description:"Кейс с игровыми ресурсами и предметами.",detail:"Стоимость кейса — 5 ₴. Содержимое и возможные награды нужно указать отдельно."},
 
   {id:"coins-50k",name:"50 000 монет",category:"coins",tag:"СТАРТ",emoji:"🪙",glow:"#f6c96d",price:10,description:"50 000 монет на игровой баланс.",detail:"Расчёт по курсу 5 000 монет за 1 ₴."},
   {id:"coins-250k",name:"250 000 монет",category:"coins",tag:"ПОПУЛЯРНОЕ",emoji:"💰",glow:"#e9b957",price:50,description:"250 000 монет на игровой баланс.",detail:"Расчёт по курсу 5 000 монет за 1 ₴."},
